@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="CSS/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class = "wrapper">
+    <header class = "navHeader">
+      <ul>
+        <a href = #><li>Unit 1</li></a>
+        <a href = #><li>Unit 2</li></a>
+        <a href = #><li>Unit 3</li></a>
+        <a href = #><li>Unit 4</li></a>
+      </ul>
+    </header>
+    <!-- Add work here in divs for each topic.-->
+    <div class = "unit">
+      <h1>Dynamic List Example JAVASCRIPT</h1>
+      <div>
+      	Team Name: <input id="itemname" type="text" name="iname" />
+      	<input id="BtnAddList" type="button" value="Add" /><br />
+      </div>
+      <table id="itemlist">
+      	<tr><td>Item</td><td>Remove</td></tr>
+      </table>
+    </div>
+
+      <hr>
+
+    <div class = "unit">
+      <h1>Dynamic List Examples jQuery</h1>
+      <div>
+        Team Name: <input id="itemname2" type="text" name="iname" />
+        <input id="BtnAddList2" type="button" value="Add" /><br />
+      </div>
+      <table id="itemlist2">
+        <tr><td>Item</td><td>Remove</td></tr>
+      </table>
+    </div>
+    <hr>
+    <div class = "unit">
+      <h1>Dynamic List Examples KO.JS</h1>
+      <form data-bind="submit: addItem">
+        New item:
+        <input data-bind='value: itemToAdd, valueUpdate: "afterkeydown"' />
+        <button type="submit" data-bind="enable: itemToAdd().length > 0">Add</button>
+      </form>
+      <p></p>
+      <table border="1">
+          <thead>
+          <th>Item</th>
+          <th>Remove</th>
+          </thead>
+          <tbody data-bind="foreach:items">
+              <tr>
+                  <td data-bind="text: $data"></td>
+                  <td><input type="button" data-bind="click:$root.deleteItem" value="X"></input></td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+  <script src="JS/Unit1/ko.js"></script>
+  <script src="JS/Unit1/model.js"></script>
+  <script src="JS/Unit1/view.js"></script>
+  <script src="JS/Unit1/controller.js"></script>
+  <script src="JS/Unit1/jQuery.js"></script>
+</body>
+
+</html>
