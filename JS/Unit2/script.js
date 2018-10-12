@@ -55,7 +55,7 @@ function addItemsToList(arr) {
 function displayItemsInList() {
        var table = document.getElementById("itemlist");
        table.innerHTML = "";
-       for (var i = 0; i < 30; i++) {
+       for (var i = 0; i < LIST.length; i++) {
         var row = table.insertRow(0);
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
